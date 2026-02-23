@@ -1,0 +1,251 @@
+/* Custom Admin Notes Dashboard Widget Styles */
+
+.can-widget-wrapper {
+	margin: -10px;
+	background: #fdfdfd;
+}
+
+.can-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 15px;
+	border-bottom: 1px solid #eee;
+	background: #fff;
+	gap: 10px;
+}
+
+.can-search-box {
+	flex-grow: 1;
+}
+
+.can-search-box input {
+	width: 100%;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+	padding: 6px 10px;
+	margin: 0;
+	font-size: 13px;
+}
+
+#can-toggle-form .dashicons {
+	font-size: 18px;
+	line-height: 28px;
+	margin-right: 4px;
+}
+
+/* Form Styles */
+#can-note-form-wrapper {
+	padding: 15px;
+	background: #f9f9f9;
+	border-bottom: 2px solid #ddd;
+}
+
+.can-form-group {
+	margin-bottom: 12px;
+}
+
+.can-form-group input[type="text"],
+.can-form-group textarea {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	padding: 8px;
+	font-size: 13px;
+}
+
+.can-form-group textarea {
+	height: 100px;
+	resize: vertical;
+}
+
+.can-color-options {
+	display: flex;
+	gap: 15px;
+	margin-top: 5px;
+}
+
+.can-color-radio {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	cursor: pointer;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.can-color-radio.info span {
+	color: #2271b1;
+}
+
+.can-color-radio.warning span {
+	color: #dba617;
+}
+
+.can-color-radio.important span {
+	color: #d63638;
+}
+
+.can-form-actions {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+/* Notes List */
+.can-notes-list {
+	max-height: 400px;
+	overflow-y: auto;
+	padding: 15px;
+}
+
+.can-note-item {
+	margin-bottom: 15px;
+	padding: 15px;
+	border-radius: 12px;
+	border-left: 5px solid #ddd;
+	background: #fff;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	animation: canFadeIn 0.4s ease-out;
+}
+
+@keyframes canFadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.can-note-item:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.can-note-item.label-info {
+	border-left-color: #3498db;
+	background: linear-gradient(to right, #f7fbff, #fff);
+}
+
+.can-note-item.label-warning {
+	border-left-color: #f1c40f;
+	background: linear-gradient(to right, #fffdf2, #fff);
+}
+
+.can-note-item.label-important {
+	border-left-color: #e74c3c;
+	background: linear-gradient(to right, #fff9f9, #fff);
+}
+
+.can-note-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 8px;
+}
+
+.can-note-title {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 700;
+	color: #1d2327;
+}
+
+.can-note-actions {
+	display: flex;
+	gap: 5px;
+}
+
+.can-note-actions button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	color: #72777c;
+	font-size: 18px;
+	padding: 2px;
+}
+
+.can-note-actions .can-edit-note:hover {
+	color: #2271b1;
+}
+
+.can-note-actions .can-delete-note:hover {
+	color: #d63638;
+}
+
+.can-note-body {
+	font-size: 13px;
+	color: #50575e;
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+
+.can-note-body p {
+	margin: 0 0 8px;
+}
+
+.can-note-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 10px;
+	color: #8c8f94;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.can-label-pill {
+	background: #eee;
+	padding: 2px 8px;
+	border-radius: 10px;
+	font-weight: 600;
+}
+
+.label-info .can-label-pill {
+	background: #d9ebff;
+	color: #2271b1;
+}
+
+.label-warning .can-label-pill {
+	background: #fdf3d7;
+	color: #856404;
+}
+
+.label-important .can-label-pill {
+	background: #fbeaea;
+	color: #d63638;
+}
+
+.can-loading {
+	text-align: center;
+	padding: 20px;
+	color: #646970;
+}
+
+.can-no-notes {
+	text-align: center;
+	padding: 20px;
+	color: #8c8f94;
+	font-style: italic;
+}
+
+/* Spinner adjustment */
+.can-btn-text.loading {
+	display: none;
+}
+
+#can-save-note .spinner {
+	float: none;
+	margin: 0 4px;
+	display: none;
+}
+
+#can-save-note.is-loading .spinner {
+	display: inline-block;
+	visibility: visible;
+}
