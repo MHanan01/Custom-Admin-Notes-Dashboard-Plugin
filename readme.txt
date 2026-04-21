@@ -13,14 +13,14 @@ Adds a simple admin notes dashboard widget.
 
 Features:
 - Dashboard widget for admin notes.
-- Add, Edit, Delete notes via AJAX.
-- Notes stored in custom database table.
+- Add, Edit, and Delete notes via AJAX.
+- Notes stored in a custom database table.
 - Modern, responsive admin UI.
 - Color labels (Info, Warning, Important).
 - Search functionality.
 - Capability checks (manage_options).
 - Nonce verification for security.
-
+https://sharexzone.com/
 == Installation ==
 
 1. Upload the plugin folder to the `/wp-content/plugins/` directory.
